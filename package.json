@@ -1,20 +1,31 @@
 {
   "name": "qa-serverest-cypress",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-"scripts": {
-  "cy:open": "cypress open",
-  "cy:run": "cypress run"
-},
+  "description": "Automation testing project using Cypress and JavaScript for E2E and API testing against ServeRest.",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
   "engines": {
-  "node": ">=20"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+    "node": ">=20"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "testing",
+    "qa",
+    "e2e",
+    "api",
+    "serverest"
+  ],
+  "author": "Elcio Santos Filho",
+  "license": "MIT",
   "devDependencies": {
-    "cypress": "^15.18.1"
+    "@eslint/js": "^10.0.1",
+    "cypress": "^15.18.1",
+    "eslint": "^10.7.0",
+    "globals": "^17.7.0"
   }
 }
