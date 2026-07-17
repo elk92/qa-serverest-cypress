@@ -2,7 +2,7 @@ export const apiClient = {
   get(url, options = {}) {
     return cy.request({
       method: 'GET',
-      url,
+      url: `${Cypress.env('apiUrl')}${url}`,
       ...options,
     })
   },
@@ -10,7 +10,7 @@ export const apiClient = {
   post(url, body, options = {}) {
     return cy.request({
       method: 'POST',
-      url,
+      url: `${Cypress.env('apiUrl')}${url}`,
       body,
       ...options,
     })
@@ -19,7 +19,7 @@ export const apiClient = {
   delete(url, options = {}) {
     return cy.request({
       method: 'DELETE',
-      url,
+      url: `${Cypress.env('apiUrl')}${url}`,
       ...options,
     })
   },
