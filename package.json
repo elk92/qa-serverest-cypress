@@ -5,8 +5,12 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
+    "test:frontend": "cypress run --spec \"cypress/e2e/frontend/**/*.cy.js\"",
+    "test:api": "cypress run --spec \"cypress/e2e/api/**/*.cy.js\"",
+    "test:all": "cypress run",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "quality": "npm run lint && npm run test:all"
   },
   "engines": {
     "node": ">=20"
