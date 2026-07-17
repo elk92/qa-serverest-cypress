@@ -16,6 +16,15 @@ export const apiClient = {
     })
   },
 
+  put(url, body, options = {}) {
+    return cy.request({
+      method: 'PUT',
+      url: `${Cypress.env('apiUrl')}${url}`,
+      body,
+      ...options,
+    })
+  },
+
   delete(url, options = {}) {
     return cy.request({
       method: 'DELETE',
